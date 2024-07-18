@@ -9,7 +9,7 @@ const DATABASE_URL =
   process.env.DATABASE_URL === undefined ? databasePath : process.env.DATABASE_URL
 module.exports = {
   VERSION: require('./package.json').version,
-  SESSION_ID: (process.env.SESSION_ID || '').trim(),
+  SESSION_ID: (process.env.SESSION_ID || 'sangha').trim(),
   DATABASE:
     DATABASE_URL === databasePath
       ? new Sequelize({
@@ -35,7 +35,7 @@ module.exports = {
   STICKER_PACKNAME: process.env.STICKER_PACKNAME || '❤️,LyFE',
   ALWAYS_ONLINE: toBool(process.env.ALWAYS_ONLINE),
   LOG_MSG: toBool(process.env.LOG_MSG) || false,
-  RMBG_KEY: process.env.RMBG_KEY || 'null',
+  RMBG_KEY: process.env.RMBG_KEY || 'iWEwbzUZCZ2pHHFHm13tXbJk',
   BAILEYS_LOG_LVL: process.env.BAILEYS_LOG_LVL || 'silent',
   LANG: (process.env.LANGUAG || 'en').toLowerCase(),
   WARN_LIMIT: process.env.WARN_LIMIT || 3,
